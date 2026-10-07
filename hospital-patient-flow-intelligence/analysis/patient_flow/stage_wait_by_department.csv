@@ -1,0 +1,13 @@
+Department,Registration,Triage,Doctor,Diagnostic,Treatment,Pharmacy
+Cardiology,10.9,15.4,78.4,18.8,2.2,10.7
+Dermatology,11.0,15.3,35.3,4.0,2.1,10.8
+ENT,10.9,15.4,34.6,4.7,2.1,10.5
+Emergency,12.3,9.5,36.4,17.7,8.3,11.7
+General Medicine,10.8,15.5,71.8,10.9,2.0,10.7
+General Surgery,10.7,15.6,47.6,14.7,2.1,10.9
+Laboratory,10.8,15.2,47.0,23.8,2.2,0.0
+Neurology,10.5,15.5,46.6,14.4,2.1,10.7
+Ophthalmology,10.7,15.3,35.3,6.1,2.1,10.9
+Orthopedics,11.0,15.3,76.1,18.4,2.2,10.4
+Pediatrics,10.8,15.3,47.2,6.8,2.2,10.7
+Radiology,10.9,15.5,45.8,24.3,2.2,0.0

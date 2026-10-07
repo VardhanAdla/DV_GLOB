@@ -1,0 +1,40 @@
+{
+    "raw": {
+        "label": "Raw Ingested Dataset",
+        "filename": "hospital_patient_flow_raw.csv",
+        "total_records": 30450,
+        "duplicate_visit_ids": 450,
+        "missing_critical_fields": {},
+        "invalid_departments": [
+            "Emerg",
+            "Paediatrics",
+            "EMERGENCY",
+            "ER"
+        ],
+        "invalid_priorities": [
+            "HIGH",
+            "critical",
+            "CRITICAL"
+        ],
+        "negative_waiting_times": {
+            "Wait_Doctor": 35
+        },
+        "consult_before_triage": 25,
+        "discharge_before_arrival": 0,
+        "doctor_wait_outliers_over_500m": 15
+    },
+    "clean": {
+        "label": "Clean Processed Dataset",
+        "filename": "hospital_patient_flow_clean.csv",
+        "total_records": 30000,
+        "duplicate_visit_ids": 0,
+        "missing_critical_fields": {},
+        "invalid_departments": [],
+        "invalid_priorities": [],
+        "negative_waiting_times": {},
+        "consult_before_triage": 0,
+        "discharge_before_arrival": 0,
+        "doctor_wait_outliers_over_500m": 0
+    },
+    "timestamp": "2026-10-01T00:25:24.582097"
+}

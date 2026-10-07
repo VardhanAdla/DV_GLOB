@@ -1,0 +1,7 @@
+Rule,Affected_Rows,Action
+Duplicate Elimination,450,Dropped duplicate Visit_IDs
+Department Standardization,98,Mapped to 12 canonical departments
+Gender Harmonization & Imputation,636,Standardized and imputed modal gender
+Negative Wait Reconciliation,34,Re-anchored to priority median wait
+Chronological Sequence Re-anchoring,25,Repaired consult timestamp to occur after triage
+Typographical Outlier Winsorization,15,Winsorized at 99th percentile cap (120m)

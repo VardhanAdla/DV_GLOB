@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Tableau autosave and logs
+*.tflx
+*.hyper.tmp
+*.log
+CrashReports/
+
+# Operating System
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store

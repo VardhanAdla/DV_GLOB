@@ -1,0 +1,48 @@
+Column_Name,Data_Type,Nullable,Domain_Values,Description,Analytical_Role
+Patient_ID,String,No,P-10000 to P-31599,Unique identifier for an individual patient across recurrent visits,Dimension (Demographic tracking)
+Visit_ID,String,No,V-2025-00001 to V-2025-30000,Primary key uniquely identifying an encounter/episode of care,Dimension (Primary Key)
+Arrival_Date,Date,No,2025-01-01 to 2025-10-31,Date of patient physical arrival at the hospital,Dimension (Temporal Date)
+Arrival_Time,Time,No,00:00:00 to 23:59:59,Time of day patient presented at reception/triage,Dimension (Temporal Time)
+Day_of_Week,String,No,Monday through Sunday,Calendar day of week derived from Arrival_Date,Dimension (Temporal)
+Month,String,No,January through October,Calendar month of arrival for seasonal modeling,Dimension (Temporal)
+Hour,Integer,No,0 to 23,Arrival hour in 24-hour format,Dimension (Temporal / Binned)
+Department,String,No,12 Clinical Departments,Clinical care unit assigned during registration/triage,Dimension (Clinical / Operational)
+Patient_Type,String,No,Emergency / Walk-in / Appointment / Referral / Follow-up,Mode of hospital encounter access,Dimension (Categorical)
+Priority_Level,String,No,Critical / High / Medium / Low,Manchester/ESI clinical urgency acuity rating,Dimension (Clinical Urgency)
+Age_Group,String,No,0-17 / 18-35 / 36-50 / 51-65 / 65+,Standard demographic age cohort bracket,Dimension (Demographic)
+Gender,String,No,Female / Male / Other,Patient biological sex / gender classification,Dimension (Demographic)
+Arrival_Mode,String,No,Ambulance / Walk-in / Private Vehicle / Public Transport,Logistical means of patient transit to hospital,Dimension (Logistics)
+Registration_Time,DateTime,No,YYYY-MM-DD HH:MM:SS,Timestamp when administrative registration concluded,Temporal Milestone
+Triage_Start_Time,DateTime,No,YYYY-MM-DD HH:MM:SS,Timestamp when nurse began clinical acuity assessment,Temporal Milestone
+Triage_End_Time,DateTime,No,YYYY-MM-DD HH:MM:SS,Timestamp when triage nurse assigned priority tier,Temporal Milestone
+Doctor_Queue_Start,DateTime,No,YYYY-MM-DD HH:MM:SS,Timestamp when patient entered physician waiting queue,Temporal Milestone
+Doctor_Consultation_Start,DateTime,No,YYYY-MM-DD HH:MM:SS,Timestamp physician examination commenced,Temporal Milestone
+Doctor_Consultation_End,DateTime,No,YYYY-MM-DD HH:MM:SS,Timestamp physician concluded initial assessment,Temporal Milestone
+Diagnostic_Required,String,No,Yes / No,Indicator if medical imaging/laboratory work was ordered,Dimension (Clinical Path)
+Diagnostic_Start,DateTime,Yes,YYYY-MM-DD HH:MM:SS,Timestamp diagnostic testing began (empty if not required),Temporal Milestone
+Diagnostic_End,DateTime,Yes,YYYY-MM-DD HH:MM:SS,Timestamp diagnostic results were generated,Temporal Milestone
+Treatment_Start,DateTime,Yes,YYYY-MM-DD HH:MM:SS,Timestamp acute bedside therapy or observation started,Temporal Milestone
+Treatment_End,DateTime,Yes,YYYY-MM-DD HH:MM:SS,Timestamp therapy or clinical procedure completed,Temporal Milestone
+Pharmacy_Required,String,No,Yes / No,Indicator if outpatient pharmacotherapy was prescribed,Dimension (Clinical Path)
+Pharmacy_Start,DateTime,Yes,YYYY-MM-DD HH:MM:SS,Timestamp prescription queued at pharmacy counter,Temporal Milestone
+Pharmacy_End,DateTime,Yes,YYYY-MM-DD HH:MM:SS,Timestamp medications dispensed to patient,Temporal Milestone
+Discharge_Time,DateTime,No,YYYY-MM-DD HH:MM:SS,Timestamp patient physically departed clinical unit,Temporal Milestone
+Total_Waiting_Time,Integer,No,0 to 300+ minutes,Sum of all waiting intervals across the encounter journey,Metric (Operational Efficiency)
+Registration_Wait_Time,Integer,No,0 to 60 minutes,Waiting duration from arrival to registration,Metric (Operational Queue)
+Triage_Wait_Time,Integer,No,0 to 45 minutes,Waiting duration from registration to triage desk,Metric (Operational Queue)
+Doctor_Wait_Time,Integer,No,0 to 180 minutes,Waiting duration from triage conclusion to doctor consult,Metric (Primary Bottleneck)
+Diagnostic_Wait_Time,Integer,No,0 to 120 minutes,Waiting duration from consult order to lab/imaging entry,Metric (Ancillary Queue)
+Treatment_Wait_Time,Integer,No,0 to 90 minutes,Waiting duration from diagnosis to therapy initiation,Metric (Clinical Queue)
+Pharmacy_Wait_Time,Integer,No,0 to 60 minutes,Waiting duration from prescription to medication pickup,Metric (Discharge Queue)
+Total_Length_of_Stay,Integer,No,15 to 480+ minutes,Total elapsed encounter duration in minutes,Metric (Throughput / Capacity)
+Patient_Status,String,No,Completed / Admitted / Transferred / LWBS,Encounter resolution status at discharge,Dimension (Outcome)
+Outcome_Category,String,No,Discharged Home / Admitted to Ward / Admitted to ICU / Transferred / Left Without Treatment,Specific administrative disposition of patient,Dimension (Clinical Disposition)
+Department_Capacity,Integer,No,20 to 65,Maximum simultaneous active beds/chairs in department,Operational Constraint
+Staff_Availability,Integer,No,3 to 16,Number of active physicians/nurses on active shift,Operational Resource
+Bed_Availability,Integer,No,0 to 25,Instantaneous count of unallocated beds during visit,Operational Resource
+Day_Type,String,No,Weekday / Weekend / Holiday,Calendar operational regime category,Dimension (Operational)
+Season,String,No,Winter / Spring / Summer / Monsoon / Autumn,Climatological season capturing seasonal morbidity,Dimension (Environmental)
+Waiting_Time_Category,String,No,Low Wait (<30m) / Moderate Wait (30-60m) / High Wait (60-90m) / Severe Delay (>90m),Binned operational categorization of total waiting delay,Dimension (SLA Performance)
+Bed_Occupancy_Rate,Float,No,0.000 to 1.000,Proportion of departmental capacity currently occupied,Metric (Capacity Pressure)
+Bottleneck_Score,Float,No,0.0 to 100.0,Multi-factor composite operational strain index (0-100),Metric (Decision Support Score)
+Bottleneck_Category,String,No,Optimal Flow / Manageable Flow / Moderate Congestion / Severe Bottleneck,Analytical threshold classification of bottleneck score,Dimension (Action Trigger)

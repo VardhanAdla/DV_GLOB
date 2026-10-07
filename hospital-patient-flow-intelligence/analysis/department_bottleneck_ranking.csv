@@ -1,0 +1,13 @@
+Department,Total_Encounters,Avg_Bottleneck_Score,Critical_Hours_Count,High_Hours_Count,Avg_Wait_Doctor,Avg_Utilization
+Cardiology,2536,76.1,1544,859,69.8,81.6
+General Medicine,5275,75.2,3190,1840,65.1,83.7
+Orthopedics,2962,74.7,1732,1071,66.7,81.2
+Pediatrics,2831,65.3,925,1663,44.4,83.2
+Neurology,1434,64.7,451,840,43.7,80.0
+General Surgery,1710,64.7,512,1029,45.2,80.3
+OPD,1395,64.6,420,835,45.2,83.0
+Pharmacy,1178,58.8,141,848,26.6,82.1
+Emergency,6824,57.2,1337,2846,31.3,83.1
+Laboratory,1381,56.4,84,980,26.1,82.3
+Radiology,1414,56.4,85,1023,26.7,81.5
+ICU,1060,49.9,64,377,23.1,78.2

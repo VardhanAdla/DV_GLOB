@@ -1,0 +1,10 @@
+,Doctor_Wait_Time,Total_Waiting_Time,Total_Length_of_Stay,Department_Capacity,Staff_Availability,Bed_Availability,Bed_Occupancy_Rate,Bottleneck_Score,Hour
+Doctor_Wait_Time,1.0,0.884,0.562,0.072,-0.134,0.036,0.024,0.912,-0.011
+Total_Waiting_Time,0.884,1.0,0.793,0.086,-0.045,0.039,0.034,0.797,0.072
+Total_Length_of_Stay,0.562,0.793,1.0,0.216,0.224,0.102,0.076,0.451,0.13
+Department_Capacity,0.072,0.086,0.216,1.0,0.827,0.527,0.236,0.039,0.09
+Staff_Availability,-0.134,-0.045,0.224,0.827,1.0,0.435,0.203,-0.256,0.18
+Bed_Availability,0.036,0.039,0.102,0.527,0.435,1.0,-0.664,-0.068,0.045
+Bed_Occupancy_Rate,0.024,0.034,0.076,0.236,0.203,-0.664,1.0,0.119,0.026
+Bottleneck_Score,0.912,0.797,0.451,0.039,-0.256,-0.068,0.119,1.0,-0.056
+Hour,-0.011,0.072,0.13,0.09,0.18,0.045,0.026,-0.056,1.0

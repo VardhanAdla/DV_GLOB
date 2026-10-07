@@ -1,0 +1,14 @@
+{
+    "initial_raw_records": 30450,
+    "duplicate_records_removed": 450,
+    "missing_age_group_imputed": 248,
+    "missing_arrival_mode_imputed": 246,
+    "missing_diagnostic_wait_reset": 100,
+    "missing_triage_end_reconstructed": 147,
+    "negative_doctor_wait_corrected": 40,
+    "negative_registration_wait_corrected": 30,
+    "sequence_errors_reconciled": 24,
+    "extreme_wait_outliers_winsorized": 15,
+    "final_clean_records": 30000,
+    "clean_columns_count": 47
+}

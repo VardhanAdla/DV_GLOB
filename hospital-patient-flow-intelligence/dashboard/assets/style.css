@@ -1,0 +1,64 @@
+/* Hospital Patient Flow Intelligence - Clean Executive Theme */
+
+.main-header {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a365d;
+    margin-bottom: 0.2rem;
+}
+
+.sub-header {
+    font-size: 1.05rem;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+}
+
+.kpi-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 16px 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    border-left: 4px solid #3182ce;
+    margin-bottom: 15px;
+}
+
+.kpi-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.kpi-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 4px 0;
+}
+
+.kpi-subtitle {
+    font-size: 0.8rem;
+    color: #a0aec0;
+}
+
+.insight-box {
+    background-color: #ebf8ff;
+    border-left: 4px solid #3182ce;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin: 12px 0;
+    color: #2c5282;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.alert-box {
+    background-color: #fff5f5;
+    border-left: 4px solid #e53e3e;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin: 12px 0;
+    color: #9b2c2c;
+    font-size: 0.95rem;
+}

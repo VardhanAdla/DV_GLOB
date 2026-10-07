@@ -1,0 +1,5 @@
+Cluster_Name,Wait_Doctor,Total_Waiting_Time,Length_of_Stay,Department_Utilization,Capacity_Pressure,Staff_Available
+Ancillary Diagnostic Stagnation,31.33,76.01,164.19,0.85,0.98,14.16
+Optimal Balanced Flow,88.31,154.36,234.9,0.83,1.19,8.34
+Outpatient Queue Surge,35.49,79.44,148.45,0.76,0.96,8.19
+Severe Emergency Overload,34.07,76.38,145.52,0.87,1.35,7.01
